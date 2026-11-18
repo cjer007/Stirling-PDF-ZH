@@ -1,0 +1,570 @@
+{
+  "certSign": {
+    "title": "证书签署 PDF - Stirling PDF",
+    "description": "使用数字证书签署 PDF 文档"
+  },
+  "sign": {
+    "title": "PDF 签名 - Stirling PDF",
+    "description": "通过手绘、文字或图片为 PDF 添加签名"
+  },
+  "addText": {
+    "title": "PDF 添加文本 - Stirling PDF",
+    "description": "在 PDF 任意位置添加自定义文本"
+  },
+  "addPassword": {
+    "title": "PDF 加密保护 - Stirling PDF",
+    "description": "为 PDF 文件添加密码保护与权限限制"
+  },
+  "removePassword": {
+    "title": "移除 PDF 密码 - Stirling PDF",
+    "description": "移除打开密码、权限密码，或两者同时移除。"
+  },
+  "removePages": {
+    "title": "删除 PDF 页面 - Stirling PDF",
+    "description": "从 PDF 文档中删除指定页面"
+  },
+  "removeBlanks": {
+    "title": "删除 PDF 空白页 - Stirling PDF",
+    "description": "从 PDF 文档中移除空白页"
+  },
+  "removeAnnotations": {
+    "title": "删除 PDF 批注 - Stirling PDF",
+    "description": "从 PDF 文档中移除批注和评论"
+  },
+  "removeImage": {
+    "title": "删除 PDF 图片 - Stirling PDF",
+    "description": "从 PDF 文档中移除全部图片"
+  },
+  "changePermissions": {
+    "title": "修改 PDF 权限 - Stirling PDF",
+    "description": "更改文档的限制与权限设置"
+  },
+  "watermark": {
+    "title": "PDF 添加水印 - Stirling PDF",
+    "description": "为 PDF 文档添加自定义水印。"
+  },
+  "sanitize": {
+    "title": "PDF 净化 - Stirling PDF",
+    "description": "移除 PDF 文件中潜在的危害元素"
+  },
+  "split": {
+    "title": "PDF 拆分 - Stirling PDF",
+    "description": "将 PDF 拆分为多个文档"
+  },
+  "merge": {
+    "title": "PDF 合并 - Stirling PDF",
+    "description": "将多个 PDF 合并为一个文档"
+  },
+  "convert": {
+    "title": "PDF 转换器 - Stirling PDF",
+    "description": "在各种格式与 PDF 之间互相转换"
+  },
+  "ocr": {
+    "title": "PDF OCR 识别 - Stirling PDF",
+    "description": "使用光学字符识别从扫描件中提取文字"
+  },
+  "addImage": {
+    "title": "PDF 添加图片 - Stirling PDF",
+    "description": "在 PDF 任意位置添加图片"
+  },
+  "rotate": {
+    "title": "PDF 旋转 - Stirling PDF",
+    "description": "轻松旋转 PDF 页面。"
+  },
+  "autoRotate": {
+    "title": "自动旋转 - Stirling PDF",
+    "description": "自动检测每页方向并校正为竖直。"
+  },
+  "annotate": {
+    "title": "PDF 批注 - Stirling PDF",
+    "description": "在阅读器中直接高亮、绘图、添加笔记与形状"
+  },
+  "scannerImageSplit": {
+    "title": "扫描照片分割 - Stirling PDF",
+    "description": "检测扫描照片并分割为独立页面"
+  },
+  "editTableOfContents": {
+    "title": "编辑 PDF 书签 - Stirling PDF",
+    "description": "添加或编辑 PDF 文档中的书签与目录"
+  },
+  "autoRename": {
+    "title": "自动重命名 PDF - Stirling PDF",
+    "description": "根据文件内容自动重命名 PDF 文件"
+  },
+  "pageLayout": {
+    "title": "PDF 多页排版 - Stirling PDF",
+    "description": "将 PDF 的多页合并排版到单页上"
+  },
+  "scalePages": {
+    "title": "调整 PDF 页面尺寸 - Stirling PDF",
+    "description": "更改页面及内容的尺寸与缩放比例。"
+  },
+  "adjustContrast": {
+    "title": "调整 PDF 颜色与对比度 - Stirling PDF",
+    "description": "调整 PDF 文档的颜色与对比度"
+  },
+  "crop": {
+    "title": "PDF 裁剪 - Stirling PDF",
+    "description": "裁剪 PDF 以减小体积（保留文字！）"
+  },
+  "pdfToSinglePage": {
+    "title": "合并为单页 PDF - Stirling PDF",
+    "description": "将所有 PDF 页面合并成一张大页面"
+  },
+  "repair": {
+    "title": "PDF 修复 - Stirling PDF",
+    "description": "修复损坏的 PDF 文件"
+  },
+  "compare": {
+    "title": "PDF 对比 - Stirling PDF",
+    "description": "对比两个 PDF 文档并高亮差异"
+  },
+  "addPageNumbers": {
+    "title": "PDF 添加页码 - Stirling PDF",
+    "description": "在文档的指定位置添加页码"
+  },
+  "redact": {
+    "title": "PDF 密文遮盖 - Stirling PDF",
+    "description": "从 PDF 文档中永久移除敏感信息"
+  },
+  "flatten": {
+    "title": "PDF 扁平化 - Stirling PDF",
+    "description": "移除 PDF 中的所有交互元素与表单"
+  },
+  "removeCertSign": {
+    "title": "移除 PDF 证书签名 - Stirling PDF",
+    "description": "从 PDF 文档中移除数字签名"
+  },
+  "unlockPDFForms": {
+    "title": "解锁 PDF 表单 - Stirling PDF",
+    "description": "移除 PDF 文档中表单字段的只读属性。"
+  },
+  "compress": {
+    "title": "PDF 压缩 - Stirling PDF",
+    "description": "压缩 PDF 以减小文件体积。"
+  },
+  "classify": {
+    "title": "文档分类 - Stirling PDF",
+    "description": "识别文档类型并为其打标签。"
+  },
+  "extractPages": {
+    "title": "提取 PDF 页面 - Stirling PDF",
+    "description": "从 PDF 文档中提取指定页面"
+  },
+  "reorganizePages": {
+    "title": "整理 PDF 页面 - Stirling PDF",
+    "description": "通过可视化拖拽重新排序、复制或删除 PDF 页面。"
+  },
+  "extractImages": {
+    "title": "提取 PDF 图片 - Stirling PDF",
+    "description": "从 PDF 文档中提取图片"
+  },
+  "addStamp": {
+    "title": "PDF 添加图章 - Stirling PDF",
+    "description": "在指定位置添加文字或图片图章"
+  },
+  "addAttachments": {
+    "title": "管理 PDF 附件 - Stirling PDF",
+    "description": "查看、添加、提取、重命名或删除 PDF 内嵌附件"
+  },
+  "createPortfolio": {
+    "title": "创建作品集 - Stirling PDF",
+    "description": "将多个文件打包成 Adobe PDF 作品集"
+  },
+  "changeMetadata": {
+    "title": "编辑 PDF 元数据 - Stirling PDF",
+    "description": "修改、删除或添加 PDF 文档的元数据"
+  },
+  "overlayPdfs": {
+    "title": "PDF 叠印 - Stirling PDF",
+    "description": "将多个 PDF 叠加合成到同一份文档"
+  },
+  "getPdfInfo": {
+    "title": "PDF 信息与元数据查看 - Stirling PDF",
+    "description": "尽可能提取 PDF 中的全部信息"
+  },
+  "checkAccessibility": {
+    "title": "检查 PDF 无障碍 - Stirling PDF",
+    "description": "按 PDF/UA 为 PDF 打分，查看哪些问题妨碍屏幕阅读器，且不修改文件"
+  },
+  "validateSignature": {
+    "title": "验证 PDF 签名 - Stirling PDF",
+    "description": "校验 PDF 文档中的数字签名与证书"
+  },
+  "timestampPdf": {
+    "title": "PDF 时间戳 - Stirling PDF",
+    "description": "添加 RFC 3161 文档时间戳，证明 PDF 的存在时间"
+  },
+  "replaceColor": {
+    "title": "替换与反色 PDF 颜色 - Stirling PDF",
+    "description": "替换或反转 PDF 文档中的颜色"
+  },
+  "showJS": {
+    "title": "查看 PDF 中的 JavaScript - Stirling PDF",
+    "description": "从 PDF 文档中提取并显示 JavaScript 代码"
+  },
+  "bookletImposition": {
+    "title": "创建 PDF 小册子 - Stirling PDF",
+    "description": "生成页码顺序正确、适合打印装订的多页小册子"
+  },
+  "pdfTextEditor": {
+    "title": "编辑 PDF 文本 - Stirling PDF",
+    "description": "通过分组文本编辑与 PDF 重生成，审阅并修改 PDF 中的文字和图片"
+  },
+  "formFill": {
+    "title": "填写 PDF 表单 - Stirling PDF",
+    "description": "用可视化编辑器填写、创建、修改和删除 PDF 表单字段"
+  },
+  "autoFormDetection": {
+    "title": "自动表单检测 - Stirling PDF",
+    "description": "用 AI 自动检测表单字段，让 PDF 可直接填写。"
+  },
+  "multiTool": {
+    "title": "PDF 页面编辑器 - Stirling PDF",
+    "description": "在同一份 PDF 上连用多个工具"
+  },
+  "read": {
+    "title": "PDF 阅读器 - Stirling PDF",
+    "description": "查看并批注 PDF：高亮文字、绘图或插入评论，便于审阅协作。"
+  },
+  "automate": {
+    "title": "PDF 工作流自动化 - Stirling PDF",
+    "description": "将多个 PDF 操作串联成多步工作流，适合重复性任务。"
+  },
+  "devApi": {
+    "title": "API - Stirling PDF",
+    "description": "API 文档链接"
+  },
+  "devFolderScanning": {
+    "title": "自动文件夹扫描 - Stirling PDF",
+    "description": "自动文件夹扫描指南链接"
+  },
+  "devSsoGuide": {
+    "title": "SSO 指南 - Stirling PDF",
+    "description": "SSO 指南链接"
+  },
+  "devAirgapped": {
+    "title": "离线环境部署 - Stirling PDF",
+    "description": "离线环境部署指南链接"
+  },
+  "/editor": {
+    "title": "编辑器 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/login": {
+    "title": "登录 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/mobile-scanner": {
+    "title": "手机扫描 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/files": {
+    "title": "文件 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings": {
+    "title": "设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/docs": {
+    "title": "文档 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor": {
+    "title": "处理器 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor/pipelines": {
+    "title": "流水线 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor/sources": {
+    "title": "数据源 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor/integrations": {
+    "title": "集成 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor/documents": {
+    "title": "文档 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/processor/review": {
+    "title": "审核 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/preferences": {
+    "title": "首选项设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/notifications": {
+    "title": "通知设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/connections": {
+    "title": "连接设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/account": {
+    "title": "账号设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/general": {
+    "title": "常规设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/people": {
+    "title": "成员设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/teams": {
+    "title": "团队设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/security": {
+    "title": "安全设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/identity": {
+    "title": "身份设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/plan": {
+    "title": "方案设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/payments": {
+    "title": "支付设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/requests": {
+    "title": "请求设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/developer": {
+    "title": "开发者设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/api-keys": {
+    "title": "API 密钥设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/connectedAccounts": {
+    "title": "已连接账号设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/hotkeys": {
+    "title": "快捷键设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminGeneral": {
+    "title": "管理员常规设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminSecurity": {
+    "title": "管理员安全设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminConnections": {
+    "title": "管理员连接设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminPrivacy": {
+    "title": "管理员隐私设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminDatabase": {
+    "title": "管理员数据库设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAdvanced": {
+    "title": "管理员高级设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminLegal": {
+    "title": "管理员法律设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminPremium": {
+    "title": "管理员高级版设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminFeatures": {
+    "title": "管理员功能设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminPlan": {
+    "title": "管理员方案设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAudit": {
+    "title": "管理员审计设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminUsage": {
+    "title": "管理员用量设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminEndpoints": {
+    "title": "管理员端点设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminStorageSharing": {
+    "title": "管理员存储分享设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminFolderAccess": {
+    "title": "管理员文件夹访问设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminMcp": {
+    "title": "管理员 MCP 设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAiGeneral": {
+    "title": "管理员 AI 常规设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAiModels": {
+    "title": "管理员 AI 模型设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAiDocuments": {
+    "title": "管理员 AI 文档设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAiLimits": {
+    "title": "管理员 AI 限额设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/adminAi": {
+    "title": "管理员 AI 设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/help": {
+    "title": "帮助设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/feedback": {
+    "title": "反馈设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/legal": {
+    "title": "法律设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/backendThirdPartyLicenses": {
+    "title": "后端第三方许可证设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/frontendThirdPartyLicenses": {
+    "title": "前端第三方许可证设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/about": {
+    "title": "关于设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/payg": {
+    "title": "按量付费设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/account-link": {
+    "title": "账号关联设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/users": {
+    "title": "用户设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/billing": {
+    "title": "计费设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/audit": {
+    "title": "审计设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/settings/storage": {
+    "title": "存储设置 - Stirling PDF",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "/pdf-to-word": {
+    "title": "PDF 转 Word 转换器 - Stirling PDF",
+    "description": "将 PDF 文件转换为可编辑的 Microsoft Word（DOCX）文档。免费、快速、私密——无需注册或填写邮箱。"
+  },
+  "/pdf-to-xlsx": {
+    "title": "PDF 转 Excel 转换器 - Stirling PDF",
+    "description": "将 PDF 表格转换为可编辑的 Microsoft Excel（XLSX）电子表格。免费、快速、私密。"
+  },
+  "/pdf-to-csv": {
+    "title": "PDF 转 CSV 转换器 - Stirling PDF",
+    "description": "从 PDF 文件中提取表格并输出为 CSV 数据。免费、快速、私密——无需注册。"
+  },
+  "/pdf-to-img": {
+    "title": "PDF 转图片转换器 - Stirling PDF",
+    "description": "将 PDF 页面转换为高质量 JPG 或 PNG 图片。免费、私密，直接在浏览器中完成。"
+  },
+  "/pdf-to-presentation": {
+    "title": "PDF 转 PowerPoint 转换器 - Stirling PDF",
+    "description": "将 PDF 文件转换为可编辑的 PowerPoint（PPTX）演示文稿。免费、快速、私密。"
+  },
+  "/pdf-to-text": {
+    "title": "PDF 转文本转换器 - Stirling PDF",
+    "description": "从 PDF 文档中提取纯文本。免费、快速、私密——无需注册或填写邮箱。"
+  },
+  "/pdf-to-markdown": {
+    "title": "PDF 转 Markdown 转换器 - Stirling PDF",
+    "description": "将 PDF 文档转换为整洁的 Markdown 文本。免费、私密，直接在浏览器中完成。"
+  },
+  "/pdf-to-html": {
+    "title": "PDF 转 HTML 转换器 - Stirling PDF",
+    "description": "将 PDF 文档转换为 HTML 网页。免费、私密，直接在浏览器中完成。"
+  },
+  "/pdf-to-xml": {
+    "title": "PDF 转 XML 转换器 - Stirling PDF",
+    "description": "将 PDF 文档转换为结构化 XML。免费、快速、私密。"
+  },
+  "/pdf-to-pdfa": {
+    "title": "PDF 转 PDF/A 转换器 - Stirling PDF",
+    "description": "将 PDF 转换为适合长期保存的 PDF/A 归档标准。免费、私密。"
+  },
+  "/img-to-pdf": {
+    "title": "图片转 PDF 转换器 - Stirling PDF",
+    "description": "将 JPG、PNG 及其他图片合并转换为一份 PDF 文档。免费、快速、私密。"
+  },
+  "/html-to-pdf": {
+    "title": "HTML 转 PDF 转换器 - Stirling PDF",
+    "description": "将 HTML 文件与网页转换为 PDF 文档。免费、快速、私密。"
+  },
+  "/markdown-to-pdf": {
+    "title": "Markdown 转 PDF 转换器 - Stirling PDF",
+    "description": "将 Markdown 文件转换为排版精美的 PDF 文档。免费、私密，直接在浏览器中完成。"
+  },
+  "/eml-to-pdf": {
+    "title": "邮件（EML）转 PDF 转换器 - Stirling PDF",
+    "description": "将邮件（EML）文件转换为 PDF 文档。免费、快速、私密——无需注册。"
+  },
+  "/file-to-pdf": {
+    "title": "文件转 PDF 转换器 - Stirling PDF",
+    "description": "将 Word、Excel、PowerPoint 等文件转换为 PDF 文档。免费、快速、私密。"
+  },
+  "/cbr-to-pdf": {
+    "title": "CBR 转 PDF 转换器 - Stirling PDF",
+    "description": "将 CBR 漫画包转换为 PDF 文档。免费、私密，直接在浏览器中完成。"
+  },
+  "/pdf-to-cbr": {
+    "title": "PDF 转 CBR 转换器 - Stirling PDF",
+    "description": "将 PDF 文档转换为 CBR 漫画包。免费、私密。"
+  },
+  "/cbz-to-pdf": {
+    "title": "CBZ 转 PDF 转换器 - Stirling PDF",
+    "description": "将 CBZ 漫画包转换为 PDF 文档。免费、私密。"
+  },
+  "/pdf-to-cbz": {
+    "title": "PDF 转 CBZ 转换器 - Stirling PDF",
+    "description": "将 PDF 文档转换为 CBZ 漫画包。免费、私密。"
+  }
+}

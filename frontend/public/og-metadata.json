@@ -1,0 +1,998 @@
+{
+  "default": {
+    "image": "/og_images/home.png",
+    "title": "Stirling PDF 简体中文版 - 下载量超 3000 万",
+    "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。"
+  },
+  "byTool": {
+    "certSign": {
+      "image": "/og_images/certSign.png",
+      "title": "证书签署 PDF - Stirling PDF",
+      "description": "使用数字证书签署 PDF 文档"
+    },
+    "sign": {
+      "image": "/og_images/sign.png",
+      "title": "PDF 签名 - Stirling PDF",
+      "description": "通过手绘、文字或图片为 PDF 添加签名"
+    },
+    "addText": {
+      "image": "/og_images/add-text.png",
+      "title": "PDF 添加文本 - Stirling PDF",
+      "description": "在 PDF 任意位置添加自定义文本"
+    },
+    "addPassword": {
+      "image": "/og_images/add-password.png",
+      "title": "PDF 加密保护 - Stirling PDF",
+      "description": "为 PDF 文件添加密码保护与权限限制"
+    },
+    "removePassword": {
+      "image": "/og_images/remove-password.png",
+      "title": "移除 PDF 密码 - Stirling PDF",
+      "description": "移除打开密码、权限密码，或两者同时移除。"
+    },
+    "removePages": {
+      "image": "/og_images/remove.png",
+      "title": "删除 PDF 页面 - Stirling PDF",
+      "description": "从 PDF 文档中删除指定页面"
+    },
+    "removeBlanks": {
+      "image": "/og_images/remove-blank-pages.png",
+      "title": "删除 PDF 空白页 - Stirling PDF",
+      "description": "从 PDF 文档中移除空白页"
+    },
+    "removeAnnotations": {
+      "image": "/og_images/remove-annotations.png",
+      "title": "删除 PDF 批注 - Stirling PDF",
+      "description": "从 PDF 文档中移除批注和评论"
+    },
+    "removeImage": {
+      "image": "/og_images/remove-image.png",
+      "title": "删除 PDF 图片 - Stirling PDF",
+      "description": "从 PDF 文档中移除全部图片"
+    },
+    "changePermissions": {
+      "image": "/og_images/change-permissions.png",
+      "title": "修改 PDF 权限 - Stirling PDF",
+      "description": "更改文档的限制与权限设置"
+    },
+    "watermark": {
+      "image": "/og_images/add-watermark.png",
+      "title": "PDF 添加水印 - Stirling PDF",
+      "description": "为 PDF 文档添加自定义水印。"
+    },
+    "sanitize": {
+      "image": "/og_images/sanitize.png",
+      "title": "PDF 净化 - Stirling PDF",
+      "description": "移除 PDF 文件中潜在的危害元素"
+    },
+    "split": {
+      "image": "/og_images/split.png",
+      "title": "PDF 拆分 - Stirling PDF",
+      "description": "将 PDF 拆分为多个文档"
+    },
+    "merge": {
+      "image": "/og_images/mergePdfs.png",
+      "title": "PDF 合并 - Stirling PDF",
+      "description": "将多个 PDF 合并为一个文档"
+    },
+    "convert": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转换器 - Stirling PDF",
+      "description": "在各种格式与 PDF 之间互相转换"
+    },
+    "ocr": {
+      "image": "/og_images/ocr.png",
+      "title": "PDF OCR 识别 - Stirling PDF",
+      "description": "使用光学字符识别从扫描件中提取文字"
+    },
+    "addImage": {
+      "image": "/og_images/add-image.png",
+      "title": "PDF 添加图片 - Stirling PDF",
+      "description": "在 PDF 任意位置添加图片"
+    },
+    "rotate": {
+      "image": "/og_images/rotate.png",
+      "title": "PDF 旋转 - Stirling PDF",
+      "description": "轻松旋转 PDF 页面。"
+    },
+    "autoRotate": {
+      "image": "/og_images/home.png",
+      "title": "自动旋转 - Stirling PDF",
+      "description": "自动检测每页方向并校正为竖直。"
+    },
+    "annotate": {
+      "image": "/og_images/annotate.png",
+      "title": "PDF 批注 - Stirling PDF",
+      "description": "在阅读器中直接高亮、绘图、添加笔记与形状"
+    },
+    "scannerImageSplit": {
+      "image": "/og_images/detect-split-scanned-photos.png",
+      "title": "扫描照片分割 - Stirling PDF",
+      "description": "检测扫描照片并分割为独立页面"
+    },
+    "editTableOfContents": {
+      "image": "/og_images/edit-table-of-contents.png",
+      "title": "编辑 PDF 书签 - Stirling PDF",
+      "description": "添加或编辑 PDF 文档中的书签与目录"
+    },
+    "autoRename": {
+      "image": "/og_images/auto-rename-pdf-file.png",
+      "title": "自动重命名 PDF - Stirling PDF",
+      "description": "根据文件内容自动重命名 PDF 文件"
+    },
+    "pageLayout": {
+      "image": "/og_images/multi-page-layout.png",
+      "title": "PDF 多页排版 - Stirling PDF",
+      "description": "将 PDF 的多页合并排版到单页上"
+    },
+    "scalePages": {
+      "image": "/og_images/adjust-page-size-scale.png",
+      "title": "调整 PDF 页面尺寸 - Stirling PDF",
+      "description": "更改页面及内容的尺寸与缩放比例。"
+    },
+    "adjustContrast": {
+      "image": "/og_images/adjust-colors-contrast.png",
+      "title": "调整 PDF 颜色与对比度 - Stirling PDF",
+      "description": "调整 PDF 文档的颜色与对比度"
+    },
+    "crop": {
+      "image": "/og_images/cropPdf.png",
+      "title": "PDF 裁剪 - Stirling PDF",
+      "description": "裁剪 PDF 以减小体积（保留文字！）"
+    },
+    "pdfToSinglePage": {
+      "image": "/og_images/single-large-page.png",
+      "title": "合并为单页 PDF - Stirling PDF",
+      "description": "将所有 PDF 页面合并成一张大页面"
+    },
+    "repair": {
+      "image": "/og_images/repair.png",
+      "title": "PDF 修复 - Stirling PDF",
+      "description": "修复损坏的 PDF 文件"
+    },
+    "compare": {
+      "image": "/og_images/compare.png",
+      "title": "PDF 对比 - Stirling PDF",
+      "description": "对比两个 PDF 文档并高亮差异"
+    },
+    "addPageNumbers": {
+      "image": "/og_images/add-page-numbers.png",
+      "title": "PDF 添加页码 - Stirling PDF",
+      "description": "在文档的指定位置添加页码"
+    },
+    "redact": {
+      "image": "/og_images/redact.png",
+      "title": "PDF 密文遮盖 - Stirling PDF",
+      "description": "从 PDF 文档中永久移除敏感信息"
+    },
+    "flatten": {
+      "image": "/og_images/flatten.png",
+      "title": "PDF 扁平化 - Stirling PDF",
+      "description": "移除 PDF 中的所有交互元素与表单"
+    },
+    "removeCertSign": {
+      "image": "/og_images/remove-certificate-sign.png",
+      "title": "移除 PDF 证书签名 - Stirling PDF",
+      "description": "从 PDF 文档中移除数字签名"
+    },
+    "unlockPDFForms": {
+      "image": "/og_images/unlock-pdf-forms.png",
+      "title": "解锁 PDF 表单 - Stirling PDF",
+      "description": "移除 PDF 文档中表单字段的只读属性。"
+    },
+    "compress": {
+      "image": "/og_images/compress.png",
+      "title": "PDF 压缩 - Stirling PDF",
+      "description": "压缩 PDF 以减小文件体积。"
+    },
+    "classify": {
+      "image": "/og_images/home.png",
+      "title": "文档分类 - Stirling PDF",
+      "description": "识别文档类型并为其打标签。"
+    },
+    "extractPages": {
+      "image": "/og_images/extract-pages.png",
+      "title": "提取 PDF 页面 - Stirling PDF",
+      "description": "从 PDF 文档中提取指定页面"
+    },
+    "reorganizePages": {
+      "image": "/og_images/reorganize-pages.png",
+      "title": "整理 PDF 页面 - Stirling PDF",
+      "description": "通过可视化拖拽重新排序、复制或删除 PDF 页面。"
+    },
+    "extractImages": {
+      "image": "/og_images/extract-images.png",
+      "title": "提取 PDF 图片 - Stirling PDF",
+      "description": "从 PDF 文档中提取图片"
+    },
+    "addStamp": {
+      "image": "/og_images/add-stamp.png",
+      "title": "PDF 添加图章 - Stirling PDF",
+      "description": "在指定位置添加文字或图片图章"
+    },
+    "addAttachments": {
+      "image": "/og_images/add-attachments.png",
+      "title": "管理 PDF 附件 - Stirling PDF",
+      "description": "查看、添加、提取、重命名或删除 PDF 内嵌附件"
+    },
+    "createPortfolio": {
+      "image": "/og_images/home.png",
+      "title": "创建作品集 - Stirling PDF",
+      "description": "将多个文件打包成 Adobe PDF 作品集"
+    },
+    "changeMetadata": {
+      "image": "/og_images/change-metadata.png",
+      "title": "编辑 PDF 元数据 - Stirling PDF",
+      "description": "修改、删除或添加 PDF 文档的元数据"
+    },
+    "overlayPdfs": {
+      "image": "/og_images/overlay-pdfs.png",
+      "title": "PDF 叠印 - Stirling PDF",
+      "description": "将多个 PDF 叠加合成到同一份文档"
+    },
+    "getPdfInfo": {
+      "image": "/og_images/get-all-info-on-pdf.png",
+      "title": "PDF 信息与元数据查看 - Stirling PDF",
+      "description": "尽可能提取 PDF 中的全部信息"
+    },
+    "checkAccessibility": {
+      "image": "/og_images/home.png",
+      "title": "检查 PDF 无障碍 - Stirling PDF",
+      "description": "按 PDF/UA 为 PDF 打分，查看哪些问题妨碍屏幕阅读器，且不修改文件"
+    },
+    "validateSignature": {
+      "image": "/og_images/validate-pdf-signature.png",
+      "title": "验证 PDF 签名 - Stirling PDF",
+      "description": "校验 PDF 文档中的数字签名与证书"
+    },
+    "timestampPdf": {
+      "image": "/og_images/timestamp-pdf.png",
+      "title": "PDF 时间戳 - Stirling PDF",
+      "description": "添加 RFC 3161 文档时间戳，证明 PDF 的存在时间"
+    },
+    "replaceColor": {
+      "image": "/og_images/replace-and-invert-color.png",
+      "title": "替换与反色 PDF 颜色 - Stirling PDF",
+      "description": "替换或反转 PDF 文档中的颜色"
+    },
+    "showJS": {
+      "image": "/og_images/show-javascript.png",
+      "title": "查看 PDF 中的 JavaScript - Stirling PDF",
+      "description": "从 PDF 文档中提取并显示 JavaScript 代码"
+    },
+    "bookletImposition": {
+      "image": "/og_images/booklet-imposition.png",
+      "title": "创建 PDF 小册子 - Stirling PDF",
+      "description": "生成页码顺序正确、适合打印装订的多页小册子"
+    },
+    "pdfTextEditor": {
+      "image": "/og_images/pdf-text-editor.png",
+      "title": "编辑 PDF 文本 - Stirling PDF",
+      "description": "通过分组文本编辑与 PDF 重生成，审阅并修改 PDF 中的文字和图片"
+    },
+    "formFill": {
+      "image": "/og_images/form-fill.png",
+      "title": "填写 PDF 表单 - Stirling PDF",
+      "description": "用可视化编辑器填写、创建、修改和删除 PDF 表单字段"
+    },
+    "autoFormDetection": {
+      "image": "/og_images/home.png",
+      "title": "自动表单检测 - Stirling PDF",
+      "description": "用 AI 自动检测表单字段，让 PDF 可直接填写。"
+    },
+    "multiTool": {
+      "image": "/og_images/multi-tool.png",
+      "title": "PDF 页面编辑器 - Stirling PDF",
+      "description": "在同一份 PDF 上连用多个工具"
+    },
+    "read": {
+      "image": "/og_images/read.png",
+      "title": "PDF 阅读器 - Stirling PDF",
+      "description": "查看并批注 PDF：高亮文字、绘图或插入评论，便于审阅协作。"
+    },
+    "automate": {
+      "image": "/og_images/automate.png",
+      "title": "PDF 工作流自动化 - Stirling PDF",
+      "description": "将多个 PDF 操作串联成多步工作流，适合重复性任务。"
+    },
+    "devApi": {
+      "image": "/og_images/dev-api.png",
+      "title": "API - Stirling PDF",
+      "description": "API 文档链接",
+      "noindex": true
+    },
+    "devFolderScanning": {
+      "image": "/og_images/dev-folder-scanning.png",
+      "title": "自动文件夹扫描 - Stirling PDF",
+      "description": "自动文件夹扫描指南链接",
+      "noindex": true
+    },
+    "devSsoGuide": {
+      "image": "/og_images/dev-sso-guide.png",
+      "title": "SSO 指南 - Stirling PDF",
+      "description": "SSO 指南链接",
+      "noindex": true
+    },
+    "devAirgapped": {
+      "image": "/og_images/dev-airgapped.png",
+      "title": "离线环境部署 - Stirling PDF",
+      "description": "离线环境部署指南链接",
+      "noindex": true
+    },
+    "/editor": {
+      "image": "/og_images/home.png",
+      "title": "编辑器 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/login": {
+      "image": "/og_images/home.png",
+      "title": "登录 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/mobile-scanner": {
+      "image": "/og_images/home.png",
+      "title": "手机扫描 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/files": {
+      "image": "/og_images/home.png",
+      "title": "文件 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings": {
+      "image": "/og_images/home.png",
+      "title": "设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/docs": {
+      "image": "/og_images/home.png",
+      "title": "文档 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor": {
+      "image": "/og_images/home.png",
+      "title": "处理器 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor/pipelines": {
+      "image": "/og_images/home.png",
+      "title": "流水线 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor/sources": {
+      "image": "/og_images/home.png",
+      "title": "数据源 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor/integrations": {
+      "image": "/og_images/home.png",
+      "title": "集成 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor/documents": {
+      "image": "/og_images/home.png",
+      "title": "文档 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/processor/review": {
+      "image": "/og_images/home.png",
+      "title": "审核 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/preferences": {
+      "image": "/og_images/home.png",
+      "title": "首选项设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/notifications": {
+      "image": "/og_images/home.png",
+      "title": "通知设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/connections": {
+      "image": "/og_images/home.png",
+      "title": "连接设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/account": {
+      "image": "/og_images/home.png",
+      "title": "账号设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/general": {
+      "image": "/og_images/home.png",
+      "title": "常规设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/people": {
+      "image": "/og_images/home.png",
+      "title": "成员设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/teams": {
+      "image": "/og_images/home.png",
+      "title": "团队设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/security": {
+      "image": "/og_images/home.png",
+      "title": "安全设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/identity": {
+      "image": "/og_images/home.png",
+      "title": "身份设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/plan": {
+      "image": "/og_images/home.png",
+      "title": "方案设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/payments": {
+      "image": "/og_images/home.png",
+      "title": "支付设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/requests": {
+      "image": "/og_images/home.png",
+      "title": "请求设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/developer": {
+      "image": "/og_images/home.png",
+      "title": "开发者设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/api-keys": {
+      "image": "/og_images/home.png",
+      "title": "API 密钥设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/connectedAccounts": {
+      "image": "/og_images/home.png",
+      "title": "已连接账号设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/hotkeys": {
+      "image": "/og_images/home.png",
+      "title": "快捷键设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminGeneral": {
+      "image": "/og_images/home.png",
+      "title": "管理员常规设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminSecurity": {
+      "image": "/og_images/home.png",
+      "title": "管理员安全设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminConnections": {
+      "image": "/og_images/home.png",
+      "title": "管理员连接设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminPrivacy": {
+      "image": "/og_images/home.png",
+      "title": "管理员隐私设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminDatabase": {
+      "image": "/og_images/home.png",
+      "title": "管理员数据库设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAdvanced": {
+      "image": "/og_images/home.png",
+      "title": "管理员高级设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminLegal": {
+      "image": "/og_images/home.png",
+      "title": "管理员法律设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminPremium": {
+      "image": "/og_images/home.png",
+      "title": "管理员高级版设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminFeatures": {
+      "image": "/og_images/home.png",
+      "title": "管理员功能设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminPlan": {
+      "image": "/og_images/home.png",
+      "title": "管理员方案设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAudit": {
+      "image": "/og_images/home.png",
+      "title": "管理员审计设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminUsage": {
+      "image": "/og_images/home.png",
+      "title": "管理员用量设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminEndpoints": {
+      "image": "/og_images/home.png",
+      "title": "管理员端点设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminStorageSharing": {
+      "image": "/og_images/home.png",
+      "title": "管理员存储分享设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminFolderAccess": {
+      "image": "/og_images/home.png",
+      "title": "管理员文件夹访问设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminMcp": {
+      "image": "/og_images/home.png",
+      "title": "管理员 MCP 设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAiGeneral": {
+      "image": "/og_images/home.png",
+      "title": "管理员 AI 常规设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAiModels": {
+      "image": "/og_images/home.png",
+      "title": "管理员 AI 模型设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAiDocuments": {
+      "image": "/og_images/home.png",
+      "title": "管理员 AI 文档设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAiLimits": {
+      "image": "/og_images/home.png",
+      "title": "管理员 AI 限额设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/adminAi": {
+      "image": "/og_images/home.png",
+      "title": "管理员 AI 设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/help": {
+      "image": "/og_images/home.png",
+      "title": "帮助设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/feedback": {
+      "image": "/og_images/home.png",
+      "title": "反馈设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/legal": {
+      "image": "/og_images/home.png",
+      "title": "法律设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/backendThirdPartyLicenses": {
+      "image": "/og_images/home.png",
+      "title": "后端第三方许可证设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/frontendThirdPartyLicenses": {
+      "image": "/og_images/home.png",
+      "title": "前端第三方许可证设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/about": {
+      "image": "/og_images/home.png",
+      "title": "关于设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/payg": {
+      "image": "/og_images/home.png",
+      "title": "按量付费设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/account-link": {
+      "image": "/og_images/home.png",
+      "title": "账号关联设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/users": {
+      "image": "/og_images/home.png",
+      "title": "用户设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/billing": {
+      "image": "/og_images/home.png",
+      "title": "计费设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/audit": {
+      "image": "/og_images/home.png",
+      "title": "审计设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/settings/storage": {
+      "image": "/og_images/home.png",
+      "title": "存储设置 - Stirling PDF",
+      "description": "可部署在任何基础设施上的免费、私密 PDF 编辑器。",
+      "noindex": true
+    },
+    "/pdf-to-word": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 Word 转换器 - Stirling PDF",
+      "description": "将 PDF 文件转换为可编辑的 Microsoft Word（DOCX）文档。免费、快速、私密——无需注册或填写邮箱。"
+    },
+    "/pdf-to-xlsx": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 Excel 转换器 - Stirling PDF",
+      "description": "将 PDF 表格转换为可编辑的 Microsoft Excel（XLSX）电子表格。免费、快速、私密。"
+    },
+    "/pdf-to-csv": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 CSV 转换器 - Stirling PDF",
+      "description": "从 PDF 文件中提取表格并输出为 CSV 数据。免费、快速、私密——无需注册。"
+    },
+    "/pdf-to-img": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转图片转换器 - Stirling PDF",
+      "description": "将 PDF 页面转换为高质量 JPG 或 PNG 图片。免费、私密，直接在浏览器中完成。"
+    },
+    "/pdf-to-presentation": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 PowerPoint 转换器 - Stirling PDF",
+      "description": "将 PDF 文件转换为可编辑的 PowerPoint（PPTX）演示文稿。免费、快速、私密。"
+    },
+    "/pdf-to-text": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转文本转换器 - Stirling PDF",
+      "description": "从 PDF 文档中提取纯文本。免费、快速、私密——无需注册或填写邮箱。"
+    },
+    "/pdf-to-markdown": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 Markdown 转换器 - Stirling PDF",
+      "description": "将 PDF 文档转换为整洁的 Markdown 文本。免费、私密，直接在浏览器中完成。"
+    },
+    "/pdf-to-html": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 HTML 转换器 - Stirling PDF",
+      "description": "将 PDF 文档转换为 HTML 网页。免费、私密，直接在浏览器中完成。"
+    },
+    "/pdf-to-xml": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 XML 转换器 - Stirling PDF",
+      "description": "将 PDF 文档转换为结构化 XML。免费、快速、私密。"
+    },
+    "/pdf-to-pdfa": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 PDF/A 转换器 - Stirling PDF",
+      "description": "将 PDF 转换为适合长期保存的 PDF/A 归档标准。免费、私密。"
+    },
+    "/img-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "图片转 PDF 转换器 - Stirling PDF",
+      "description": "将 JPG、PNG 及其他图片合并转换为一份 PDF 文档。免费、快速、私密。"
+    },
+    "/html-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "HTML 转 PDF 转换器 - Stirling PDF",
+      "description": "将 HTML 文件与网页转换为 PDF 文档。免费、快速、私密。"
+    },
+    "/markdown-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "Markdown 转 PDF 转换器 - Stirling PDF",
+      "description": "将 Markdown 文件转换为排版精美的 PDF 文档。免费、私密，直接在浏览器中完成。"
+    },
+    "/eml-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "邮件（EML）转 PDF 转换器 - Stirling PDF",
+      "description": "将邮件（EML）文件转换为 PDF 文档。免费、快速、私密——无需注册。"
+    },
+    "/file-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "文件转 PDF 转换器 - Stirling PDF",
+      "description": "将 Word、Excel、PowerPoint 等文件转换为 PDF 文档。免费、快速、私密。"
+    },
+    "/cbr-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "CBR 转 PDF 转换器 - Stirling PDF",
+      "description": "将 CBR 漫画包转换为 PDF 文档。免费、私密，直接在浏览器中完成。"
+    },
+    "/pdf-to-cbr": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 CBR 转换器 - Stirling PDF",
+      "description": "将 PDF 文档转换为 CBR 漫画包。免费、私密。"
+    },
+    "/cbz-to-pdf": {
+      "image": "/og_images/convert.png",
+      "title": "CBZ 转 PDF 转换器 - Stirling PDF",
+      "description": "将 CBZ 漫画包转换为 PDF 文档。免费、私密。"
+    },
+    "/pdf-to-cbz": {
+      "image": "/og_images/convert.png",
+      "title": "PDF 转 CBZ 转换器 - Stirling PDF",
+      "description": "将 PDF 文档转换为 CBZ 漫画包。免费、私密。"
+    }
+  },
+  "byPath": {
+    "/cert-sign": "certSign",
+    "/sign": "sign",
+    "/add-text": "addText",
+    "/add-password": "addPassword",
+    "/remove-password": "removePassword",
+    "/remove-pages": "removePages",
+    "/remove-blanks": "removeBlanks",
+    "/remove-annotations": "removeAnnotations",
+    "/remove-image": "removeImage",
+    "/change-permissions": "changePermissions",
+    "/watermark": "watermark",
+    "/sanitize": "sanitize",
+    "/split": "split",
+    "/merge": "merge",
+    "/convert": "convert",
+    "/ocr": "ocr",
+    "/add-image": "addImage",
+    "/rotate": "rotate",
+    "/auto-rotate": "autoRotate",
+    "/annotate": "annotate",
+    "/scanner-image-split": "scannerImageSplit",
+    "/edit-table-of-contents": "editTableOfContents",
+    "/auto-rename": "autoRename",
+    "/page-layout": "pageLayout",
+    "/scale-pages": "scalePages",
+    "/adjust-contrast": "adjustContrast",
+    "/crop": "crop",
+    "/pdf-to-single-page": "pdfToSinglePage",
+    "/repair": "repair",
+    "/compare": "compare",
+    "/add-page-numbers": "addPageNumbers",
+    "/redact": "redact",
+    "/flatten": "flatten",
+    "/remove-cert-sign": "removeCertSign",
+    "/unlock-p-d-f-forms": "unlockPDFForms",
+    "/compress": "compress",
+    "/classify": "classify",
+    "/extract-pages": "extractPages",
+    "/reorganize-pages": "reorganizePages",
+    "/extract-images": "extractImages",
+    "/add-stamp": "addStamp",
+    "/add-attachments": "addAttachments",
+    "/create-portfolio": "createPortfolio",
+    "/change-metadata": "changeMetadata",
+    "/overlay-pdfs": "overlayPdfs",
+    "/get-pdf-info": "getPdfInfo",
+    "/check-accessibility": "checkAccessibility",
+    "/validate-signature": "validateSignature",
+    "/timestamp-pdf": "timestampPdf",
+    "/replace-color": "replaceColor",
+    "/show-j-s": "showJS",
+    "/booklet-imposition": "bookletImposition",
+    "/pdf-text-editor": "pdfTextEditor",
+    "/form-fill": "formFill",
+    "/auto-form-detection": "autoFormDetection",
+    "/multi-tool": "multiTool",
+    "/read": "read",
+    "/automate": "automate",
+    "/dev-api": "devApi",
+    "/dev-folder-scanning": "devFolderScanning",
+    "/dev-sso-guide": "devSsoGuide",
+    "/dev-airgapped": "devAirgapped",
+    "/split-pdfs": "split",
+    "/merge-pdfs": "merge",
+    "/compress-pdf": "compress",
+    "/rotate-pdf": "rotate",
+    "/convert-pdf": "convert",
+    "/file-to-pdf": "/file-to-pdf",
+    "/eml-to-pdf": "/eml-to-pdf",
+    "/html-to-pdf": "/html-to-pdf",
+    "/markdown-to-pdf": "/markdown-to-pdf",
+    "/pdf-to-csv": "/pdf-to-csv",
+    "/pdf-to-xlsx": "/pdf-to-xlsx",
+    "/pdf-to-img": "/pdf-to-img",
+    "/pdf-to-markdown": "/pdf-to-markdown",
+    "/pdf-to-pdfa": "/pdf-to-pdfa",
+    "/pdf-to-word": "/pdf-to-word",
+    "/pdf-to-xml": "/pdf-to-xml",
+    "/cbr-to-pdf": "/cbr-to-pdf",
+    "/pdf-to-cbr": "/pdf-to-cbr",
+    "/cbz-to-pdf": "/cbz-to-pdf",
+    "/pdf-to-cbz": "/pdf-to-cbz",
+    "/manage-signatures": "certSign",
+    "/remove-certificate-sign": "removeCertSign",
+    "/unlock-pdf-forms": "unlockPDFForms",
+    "/sanitize-pdf": "sanitize",
+    "/ocr-pdf": "ocr",
+    "/add-watermark": "watermark",
+    "/single-large-page": "pdfToSinglePage",
+    "/auto-split-pdf": "split",
+    "/auto-size-split-pdf": "split",
+    "/annotations": "annotate",
+    "/replace-color-pdf": "replaceColor",
+    "/accessibility-report": "checkAccessibility",
+    "/show-js": "showJS",
+    "/pdf-organizer": "reorganizePages",
+    "/multi-page-layout": "pageLayout",
+    "/extract-page": "extractPages",
+    "/img-to-pdf": "/img-to-pdf",
+    "/pdf-to-presentation": "/pdf-to-presentation",
+    "/pdf-to-text": "/pdf-to-text",
+    "/pdf-to-html": "/pdf-to-html",
+    "/auto-redact": "redact",
+    "/stamp": "addStamp",
+    "/view-pdf": "read",
+    "/get-info-on-pdf": "getPdfInfo",
+    "/remove-image-pdf": "removeImage",
+    "/replace-and-invert-color-pdf": "replaceColor",
+    "/pipeline": "automate",
+    "/extract-image-scans": "scannerImageSplit",
+    "/show-javascript": "showJS",
+    "/split-by-size-or-count": "split",
+    "/overlay-pdf": "overlayPdfs",
+    "/split-pdf-by-sections": "split",
+    "/split-pdf-by-chapters": "split",
+    "/editor": "/editor",
+    "/login": "/login",
+    "/mobile-scanner": "/mobile-scanner",
+    "/files": "/files",
+    "/settings": "/settings",
+    "/docs": "/docs",
+    "/processor": "/processor",
+    "/processor/pipelines": "/processor/pipelines",
+    "/processor/sources": "/processor/sources",
+    "/processor/integrations": "/processor/integrations",
+    "/processor/documents": "/processor/documents",
+    "/processor/review": "/processor/review",
+    "/settings/preferences": "/settings/preferences",
+    "/settings/notifications": "/settings/notifications",
+    "/settings/connections": "/settings/connections",
+    "/settings/account": "/settings/account",
+    "/settings/general": "/settings/general",
+    "/settings/people": "/settings/people",
+    "/settings/teams": "/settings/teams",
+    "/settings/security": "/settings/security",
+    "/settings/identity": "/settings/identity",
+    "/settings/plan": "/settings/plan",
+    "/settings/payments": "/settings/payments",
+    "/settings/requests": "/settings/requests",
+    "/settings/developer": "/settings/developer",
+    "/settings/api-keys": "/settings/api-keys",
+    "/settings/connectedAccounts": "/settings/connectedAccounts",
+    "/settings/hotkeys": "/settings/hotkeys",
+    "/settings/adminGeneral": "/settings/adminGeneral",
+    "/settings/adminSecurity": "/settings/adminSecurity",
+    "/settings/adminConnections": "/settings/adminConnections",
+    "/settings/adminPrivacy": "/settings/adminPrivacy",
+    "/settings/adminDatabase": "/settings/adminDatabase",
+    "/settings/adminAdvanced": "/settings/adminAdvanced",
+    "/settings/adminLegal": "/settings/adminLegal",
+    "/settings/adminPremium": "/settings/adminPremium",
+    "/settings/adminFeatures": "/settings/adminFeatures",
+    "/settings/adminPlan": "/settings/adminPlan",
+    "/settings/adminAudit": "/settings/adminAudit",
+    "/settings/adminUsage": "/settings/adminUsage",
+    "/settings/adminEndpoints": "/settings/adminEndpoints",
+    "/settings/adminStorageSharing": "/settings/adminStorageSharing",
+    "/settings/adminFolderAccess": "/settings/adminFolderAccess",
+    "/settings/adminMcp": "/settings/adminMcp",
+    "/settings/adminAiGeneral": "/settings/adminAiGeneral",
+    "/settings/adminAiModels": "/settings/adminAiModels",
+    "/settings/adminAiDocuments": "/settings/adminAiDocuments",
+    "/settings/adminAiLimits": "/settings/adminAiLimits",
+    "/settings/adminAi": "/settings/adminAi",
+    "/settings/help": "/settings/help",
+    "/settings/feedback": "/settings/feedback",
+    "/settings/legal": "/settings/legal",
+    "/settings/backendThirdPartyLicenses": "/settings/backendThirdPartyLicenses",
+    "/settings/frontendThirdPartyLicenses": "/settings/frontendThirdPartyLicenses",
+    "/settings/about": "/settings/about",
+    "/settings/payg": "/settings/payg",
+    "/settings/account-link": "/settings/account-link",
+    "/settings/users": "/settings/users",
+    "/settings/billing": "/settings/billing",
+    "/settings/audit": "/settings/audit",
+    "/settings/storage": "/settings/storage"
+  },
+  "canonicalByPath": {
+    "/annotate": "/annotations",
+    "/pdf-to-single-page": "/single-large-page",
+    "/remove-cert-sign": "/remove-certificate-sign",
+    "/unlock-p-d-f-forms": "/unlock-pdf-forms",
+    "/replace-color": "/replace-color-pdf",
+    "/show-j-s": "/show-js",
+    "/split-pdfs": "/split",
+    "/merge-pdfs": "/merge",
+    "/compress-pdf": "/compress",
+    "/rotate-pdf": "/rotate",
+    "/convert-pdf": "/convert",
+    "/manage-signatures": "/cert-sign",
+    "/sanitize-pdf": "/sanitize",
+    "/ocr-pdf": "/ocr",
+    "/add-watermark": "/watermark",
+    "/auto-split-pdf": "/split",
+    "/auto-size-split-pdf": "/split",
+    "/accessibility-report": "/check-accessibility",
+    "/pdf-organizer": "/reorganize-pages",
+    "/multi-page-layout": "/page-layout",
+    "/extract-page": "/extract-pages",
+    "/auto-redact": "/redact",
+    "/stamp": "/add-stamp",
+    "/view-pdf": "/read",
+    "/get-info-on-pdf": "/get-pdf-info",
+    "/remove-image-pdf": "/remove-image",
+    "/replace-and-invert-color-pdf": "/replace-color-pdf",
+    "/pipeline": "/automate",
+    "/extract-image-scans": "/scanner-image-split",
+    "/show-javascript": "/show-js",
+    "/split-by-size-or-count": "/split",
+    "/overlay-pdf": "/overlay-pdfs",
+    "/split-pdf-by-sections": "/split",
+    "/split-pdf-by-chapters": "/split"
+  }
+}
