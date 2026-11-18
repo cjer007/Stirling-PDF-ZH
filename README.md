@@ -71,6 +71,18 @@
 
 手机扫码上传、手机手绘签名、API 落地页这三张手写页面原本是硬编码英文，已全部汉化。
 
+## 下载安装（Windows）
+
+到 [Releases](https://github.com/cjer007/Stirling-PDF-ZH/releases/latest) 下载 `StirlingPDF-CN-Setup-3.3.0.exe` 双击安装。
+
+- 内置 Java 运行时，**不需要另装 Java**
+- 装完桌面有快捷方式，首次运行进入中文配置向导
+- 装到 `%LOCALAPPDATA%\Programs\StirlingPDF`（用户目录，不需要管理员权限，因为 Stirling 要在程序目录写 `settings.yml` 和日志）
+
+安装包 SHA256：`3f84831ea8639be92da03d537c114dc83c242e881190adf35ff7dcb6fd9e2dd2`
+
+在官网 <https://pdf.cjers.top> 也有下载入口。
+
 ## 快速开始
 
 ```bash
