@@ -206,6 +206,8 @@ public class RequestUriUtils {
                         "/api/v1/ui-data/footer-info") // Public footer configuration
                 || trimmedUri.startsWith("/api/v1/invite/validate")
                 || trimmedUri.startsWith("/api/v1/invite/accept")
+                // 授权与试用（前端在登录前就要查剩余次数，试用计数在服务端）
+                || trimmedUri.startsWith("/api/v1/license/")
                 // Health Endpoints
                 || trimmedUri.startsWith("/actuator/health")
                 || trimmedUri.startsWith("/health")
