@@ -19,10 +19,17 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 授权服务客户端。
  *
- * <p>机器码 = "S" + SHA-256(各网卡 MAC | 主机名 | 固定盐) 的前 32 位十六进制，共 33 个字符。 前缀 "S" 让授权服务端把它识别为 Stirling
- * 产品线（PDF 工具箱走 32 位、无前缀）。
+ * <p>两种计次主体，由 {@code STIRLING_LICENSE_MODE} 决定：
  *
- * <p>契约：所有方法都不抛异常。授权服务不可达时返回 {@code ok=true, degraded=true} 放行—— 商业上宁可少算一次，也不能让断网或服务端抖动把客户的软件锁死。
+ * <ul>
+ *   <li>默认（桌面版）：机器码 = "S" + SHA-256(各网卡 MAC | 主机名 | 固定盐) 前 32 位，一台机器一份额度。
+ *   <li>{@code online}（在线演示实例）：机器码由访问者 IP 派生，同一个 IP 一份额度；服务器没有反向代理， {@code getRemoteAddr()} 就是真实来源
+ *       IP。
+ * </ul>
+ *
+ * <p>两者共用授权服务的 33 字符约定（前缀 "S" 表示 Stirling 产品线）。
+ *
+ * <p>契约：所有方法都不抛异常。授权服务不可达时返回 {@code ok=true, degraded=true} 放行—— 商业上宁可少算一次，也不能让服务端抖动把客户锁死。
  */
 @Slf4j
 @Service
@@ -32,9 +39,17 @@ public class LicenseService {
     private static final Duration CONNECT_TIMEOUT = Duration.ofSeconds(5);
     private static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(8);
 
+    /** 在线演示模式：按访问者 IP 计次，而不是服务器硬件。 */
+    private static final boolean ONLINE_MODE =
+            "online".equalsIgnoreCase(System.getenv("STIRLING_LICENSE_MODE"));
+
     private final HttpClient http = HttpClient.newBuilder().connectTimeout(CONNECT_TIMEOUT).build();
 
-    private volatile String cachedMachineCode;
+    private volatile String cachedHardwareCode;
+
+    public boolean isOnlineMode() {
+        return ONLINE_MODE;
+    }
 
     /** 授权服务根地址，可用 STIRLING_LICENSE_SERVER 覆盖（本地调试用）。 */
     public String server() {
@@ -42,9 +57,23 @@ public class LicenseService {
         return (env == null || env.isBlank()) ? DEFAULT_SERVER : env.replaceAll("/+$", "");
     }
 
-    public synchronized String machineCode() {
-        if (cachedMachineCode != null) {
-            return cachedMachineCode;
+    /**
+     * 取本次请求的计次主体。
+     *
+     * @param clientIp 访问者 IP，桌面版传 null
+     */
+    public String subjectFor(String clientIp) {
+        return ONLINE_MODE ? ipCode(clientIp) : hardwareCode();
+    }
+
+    private String ipCode(String ip) {
+        String seed = (ip == null || ip.isBlank()) ? "unknown" : ip.trim();
+        return "S" + sha256Hex("online-v1|" + seed).substring(0, 32).toUpperCase();
+    }
+
+    public synchronized String hardwareCode() {
+        if (cachedHardwareCode != null) {
+            return cachedHardwareCode;
         }
         StringBuilder sb = new StringBuilder();
         try {
@@ -64,9 +93,8 @@ public class LicenseService {
             log.debug("读取网卡信息失败，改用主机名派生机器码: {}", e.toString());
         }
         sb.append(hostName()).append("|stirling-zh-v1");
-        String hex = sha256Hex(sb.toString());
-        cachedMachineCode = "S" + hex.substring(0, 32).toUpperCase();
-        return cachedMachineCode;
+        cachedHardwareCode = "S" + sha256Hex(sb.toString()).substring(0, 32).toUpperCase();
+        return cachedHardwareCode;
     }
 
     private static String hostName() {
@@ -92,31 +120,27 @@ public class LicenseService {
 
     // ---------- 与授权服务通信 ----------
 
-    /** 查询状态：首次访问会在服务端建档并发放试用次数。 */
-    public Map<String, Object> checkin() {
-        return post("/api/checkin", Map.of("mid", machineCode(), "host", hostName()));
+    public Map<String, Object> checkin(String subject) {
+        return post("/api/checkin", Map.of("mid", subject, "host", hostName()));
     }
 
-    /** 消耗一次试用。已付费时服务端不计次。 */
-    public Map<String, Object> consume(String feature) {
+    public Map<String, Object> consume(String subject, String feature) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("mid", machineCode());
+        body.put("mid", subject);
         body.put("feature", feature == null ? "" : feature);
         return post("/api/consume", body);
     }
 
-    /** 用兑换码激活。 */
-    public Map<String, Object> redeem(String code) {
+    public Map<String, Object> redeem(String subject, String code) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("mid", machineCode());
+        body.put("mid", subject);
         body.put("code", code == null ? "" : code.trim());
         return post("/api/redeem", body);
     }
 
-    /** 提交邮箱授权申请（人工开通）。 */
-    public Map<String, Object> apply(String email) {
+    public Map<String, Object> apply(String subject, String email) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("mid", machineCode());
+        body.put("mid", subject);
         body.put("email", email == null ? "" : email.trim());
         body.put("host", hostName());
         return post("/api/apply", body);
@@ -142,7 +166,8 @@ public class LicenseService {
             if (parsed == null) {
                 return degraded("授权服务响应无法解析");
             }
-            parsed.put("machine_code", machineCode());
+            parsed.put("machine_code", payload.get("mid"));
+            parsed.put("online_mode", ONLINE_MODE);
             return parsed;
         } catch (Exception e) {
             log.warn("连接授权服务失败：{}", e.toString());
@@ -155,7 +180,7 @@ public class LicenseService {
         m.put("ok", true);
         m.put("degraded", true);
         m.put("msg", reason);
-        m.put("machine_code", machineCode());
+        m.put("online_mode", ONLINE_MODE);
         return m;
     }
 
@@ -201,7 +226,6 @@ public class LicenseService {
         return sb.toString();
     }
 
-    /** 只解析扁平对象（授权服务返回的就是扁平结构）。 */
     private static Map<String, Object> parseFlat(String s) {
         if (s == null) {
             return null;
