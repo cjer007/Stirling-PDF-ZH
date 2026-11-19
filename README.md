@@ -73,7 +73,11 @@
 
 ## 下载安装（Windows）
 
-到 [Releases](https://github.com/cjer007/Stirling-PDF-ZH/releases/latest) 下载 `StirlingPDF-CN-Setup-3.3.0.exe` 双击安装。
+**国内直连下载（推荐）**：<https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.0.exe>
+
+GitHub 备用：到 [Releases](https://github.com/cjer007/Stirling-PDF-ZH/releases/latest) 下载同名文件。
+
+也可以直接在线试用，不用下载：<https://pdf.cjers.top>（页面上「立即在线使用」）
 
 - 内置 Java 运行时，**不需要另装 Java**
 - 装完桌面有快捷方式，首次运行进入中文配置向导
