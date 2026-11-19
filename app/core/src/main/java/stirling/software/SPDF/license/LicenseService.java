@@ -76,6 +76,27 @@ public class LicenseService {
             return cachedHardwareCode;
         }
         StringBuilder sb = new StringBuilder();
+        boolean win = System.getProperty("os.name", "").toLowerCase().contains("win");
+        if (win) {
+            // Windows：MachineGuid 是安装时生成且重装系统才变的稳定标识，
+            // 配合系统盘卷序列号，比单看 MAC 难改得多
+            sb.append(windowsMachineGuid()).append('|');
+            sb.append(systemVolumeSerial()).append('|');
+        } else {
+            // Linux/macOS：machine-id 与主板 UUID 都不随网卡变化
+            sb.append(readFileQuiet("/etc/machine-id")).append('|');
+            sb.append(readFileQuiet("/sys/class/dmi/id/product_uuid")).append('|');
+            sb.append(readFileQuiet("/var/lib/dbus/machine-id")).append('|');
+        }
+        sb.append(physicalMacs()).append('|');
+        sb.append(hostName()).append("|stirling-zh-v2");
+        cachedHardwareCode = "S" + sha256Hex(sb.toString()).substring(0, 32).toUpperCase();
+        return cachedHardwareCode;
+    }
+
+    /** 只用物理网卡（跳过虚拟/回环），避免装个 VPN 或虚拟机就换码。 */
+    private static String physicalMacs() {
+        StringBuilder sb = new StringBuilder();
         try {
             Enumeration<java.net.NetworkInterface> ifaces =
                     java.net.NetworkInterface.getNetworkInterfaces();
@@ -84,17 +105,74 @@ public class LicenseService {
                 if (!ni.isUp() || ni.isLoopback() || ni.isVirtual()) {
                     continue;
                 }
+                String name = ni.getName() == null ? "" : ni.getName().toLowerCase();
+                if (name.startsWith("veth")
+                        || name.startsWith("docker")
+                        || name.startsWith("br-")
+                        || name.startsWith("virbr")
+                        || name.startsWith("vmnet")
+                        || name.contains("loopback")) {
+                    continue;
+                }
                 byte[] mac = ni.getHardwareAddress();
                 if (mac != null && mac.length > 0) {
-                    sb.append(HexFormat.of().formatHex(mac)).append('|');
+                    sb.append(HexFormat.of().formatHex(mac)).append(',');
                 }
             }
         } catch (Exception e) {
-            log.debug("读取网卡信息失败，改用主机名派生机器码: {}", e.toString());
+            log.debug("读取网卡信息失败: {}", e.toString());
         }
-        sb.append(hostName()).append("|stirling-zh-v1");
-        cachedHardwareCode = "S" + sha256Hex(sb.toString()).substring(0, 32).toUpperCase();
-        return cachedHardwareCode;
+        return sb.toString();
+    }
+
+    private static String readFileQuiet(String path) {
+        try {
+            return java.nio.file.Files.readString(java.nio.file.Path.of(path)).trim();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /** 读 Windows 的 MachineGuid（HKLM\SOFTWARE\Microsoft\Cryptography）。 */
+    private static String windowsMachineGuid() {
+        try {
+            Process p =
+                    new ProcessBuilder(
+                                    "reg",
+                                    "query",
+                                    "HKLM\\SOFTWARE\\Microsoft\\Cryptography",
+                                    "/v",
+                                    "MachineGuid")
+                            .redirectErrorStream(true)
+                            .start();
+            String out = new String(p.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+            p.waitFor();
+            java.util.regex.Matcher m =
+                    java.util.regex.Pattern.compile(
+                                    "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})")
+                            .matcher(out);
+            if (m.find()) {
+                return m.group(1);
+            }
+        } catch (Exception e) {
+            log.debug("读取 MachineGuid 失败: {}", e.toString());
+        }
+        return "";
+    }
+
+    /** 系统盘卷序列号；换硬盘才会变，重装系统不变。 */
+    private static String systemVolumeSerial() {
+        try {
+            String root = System.getProperty("user.dir", "");
+            java.nio.file.Path target =
+                    root.isEmpty() ? java.nio.file.Path.of(".") : java.nio.file.Path.of(root);
+            java.nio.file.FileStore fs = java.nio.file.Files.getFileStore(target);
+            Object vsn = fs.getAttribute("volume:vsn");
+            return vsn == null ? "" : String.valueOf(vsn);
+        } catch (Exception e) {
+            log.debug("读取卷序列号失败: {}", e.toString());
+        }
+        return "";
     }
 
     private static String hostName() {
