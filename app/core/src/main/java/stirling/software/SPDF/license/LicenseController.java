@@ -49,8 +49,25 @@ public class LicenseController {
         return req.getRemoteAddr();
     }
 
+    /**
+     * 计次主体的原始标识。
+     *
+     * <p>在线模式下优先用浏览器持久化的设备 ID：移动网络出口 IP 一直在变，只按 IP 会把同一个人 当成多个新用户，试用额度就白设了。设备 ID 缺失（禁用
+     * localStorage）时才回落到 IP。
+     */
+    private static String subjectSeed(HttpServletRequest req) {
+        String dev = req.getHeader("X-Device-Id");
+        if (dev != null) {
+            dev = dev.trim();
+            if (dev.length() >= 16 && dev.length() <= 128) {
+                return "device:" + dev;
+            }
+        }
+        return "ip:" + clientIp(req);
+    }
+
     private String subject(HttpServletRequest req) {
-        return licenseService.subjectFor(licenseService.isOnlineMode() ? clientIp(req) : null);
+        return licenseService.subjectFor(licenseService.isOnlineMode() ? subjectSeed(req) : null);
     }
 
     @GetMapping(value = "/status", produces = MediaType.APPLICATION_JSON_VALUE)
