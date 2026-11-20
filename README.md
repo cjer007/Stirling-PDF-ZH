@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.3.exe">下载</a> ·
+  <a href="https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.6.exe">下载</a> ·
   <a href="https://app.cjers.top">在线试用</a> ·
   <a href="https://github.com/Stirling-Tools/Stirling-PDF">上游项目</a>
 </p>
@@ -73,7 +73,7 @@
 
 ## 下载安装（Windows）
 
-**国内直连下载（推荐）**：<https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.3.exe>
+**国内直连下载（推荐）**：<https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.6.exe>
 
 GitHub 备用：到 [Releases](https://github.com/cjer007/Stirling-PDF-ZH/releases/latest) 下载同名文件。
 
@@ -83,7 +83,7 @@ GitHub 备用：到 [Releases](https://github.com/cjer007/Stirling-PDF-ZH/releas
 - 装完桌面有快捷方式，首次运行进入中文配置向导
 - 装到 `%LOCALAPPDATA%\Programs\StirlingPDF`（用户目录，不需要管理员权限，因为 Stirling 要在程序目录写 `settings.yml` 和日志）
 
-安装包 SHA256：`f2f35b71326a24fbab57059d97269962881a001b318f547ef1b6176048cb15aa`
+安装包 SHA256：`4f3f851be31f429918cbd174a322f23b8b8eeddea57a75c30631eedd7d09cc7c`
 
 在官网 <https://pdf.cjers.top> 也有下载入口。
 

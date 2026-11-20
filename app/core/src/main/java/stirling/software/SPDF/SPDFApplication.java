@@ -79,6 +79,8 @@ public class SPDFApplication {
                     Path.of(InstallationPathConfig.getSettingsPath())
                             .resolveSibling(".instance.lock");
             Files.createDirectories(lockPath.getParent());
+            String port = resolveServerPort();
+
             instanceLockChannel =
                     FileChannel.open(lockPath, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
             FileLock lock = instanceLockChannel.tryLock();
@@ -87,13 +89,88 @@ public class SPDFApplication {
             }
             instanceLockChannel.close();
             instanceLockChannel = null;
-            String port = resolveServerPort();
-            log.warn("已有实例在运行，打开浏览器指向 localhost:{}", port);
+
+            if (instanceHealthy(port)) {
+                log.warn("已有实例在运行，打开浏览器指向 localhost:{}", port);
+                browseLocal(port);
+                return true;
+            }
+
+            log.warn("锁被占用但实例无响应，判定为残留实例，尝试清理");
+            killStaleInstances();
+
+            instanceLockChannel =
+                    FileChannel.open(lockPath, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            lock = instanceLockChannel.tryLock();
+            if (lock != null) {
+                log.warn("残留实例已清理，继续启动");
+                return false;
+            }
+            instanceLockChannel.close();
+            instanceLockChannel = null;
+
+            log.warn("清理失败，仍有进程持有锁，打开浏览器");
             browseLocal(port);
             return true;
         } catch (Exception e) {
             log.debug("单实例检测失败，按全新启动处理: {}", e.toString());
             return false;
+        }
+    }
+
+    /**
+     * 实例是否真的在服务。
+     *
+     * <p>只认 Stirling 自己的状态响应，避免把占用同端口的其他程序当成已运行实例。
+     */
+    private static boolean instanceHealthy(String port) {
+        try {
+            java.net.http.HttpClient client =
+                    java.net.http.HttpClient.newBuilder()
+                            .connectTimeout(java.time.Duration.ofSeconds(2))
+                            .build();
+            java.net.http.HttpRequest req =
+                    java.net.http.HttpRequest.newBuilder(
+                                    URI.create("http://127.0.0.1:" + port + "/api/v1/info/status"))
+                            .timeout(java.time.Duration.ofSeconds(3))
+                            .GET()
+                            .build();
+            java.net.http.HttpResponse<String> resp =
+                    client.send(req, java.net.http.HttpResponse.BodyHandlers.ofString());
+            return resp.statusCode() == 200 && resp.body().contains("\"status\"");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * 终止本程序的其他进程。
+     *
+     * <p>只匹配命令行或可执行文件名含 StirlingPDF 的进程，不碰无关程序——按端口杀进程会误伤占用同端口的 其他服务。
+     */
+    private static void killStaleInstances() {
+        long self = ProcessHandle.current().pid();
+        long parent = ProcessHandle.current().parent().map(ProcessHandle::pid).orElse(-1L);
+        boolean killed = false;
+        try {
+            for (ProcessHandle ph :
+                    (Iterable<ProcessHandle>) ProcessHandle.allProcesses()::iterator) {
+                long pid = ph.pid();
+                if (pid == self || pid == parent) {
+                    continue;
+                }
+                String exe = ph.info().command().orElse("");
+                if (exe.contains("StirlingPDF")) {
+                    log.warn("终止残留实例 pid={}", pid);
+                    ph.destroyForcibly();
+                    killed = true;
+                }
+            }
+            if (killed) {
+                Thread.sleep(4000);
+            }
+        } catch (Exception e) {
+            log.debug("清理残留实例失败: {}", e.toString());
         }
     }
 
