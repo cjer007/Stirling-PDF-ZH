@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/cjer007/Stirling-PDF-ZH/releases">下载</a> ·
-  <a href="https://lic.cjers.top">在线体验</a> ·
+  <a href="https://pdf.cjers.top/download/StirlingPDF-CN-Setup-3.3.0.exe">下载</a> ·
+  <a href="https://app.cjers.top">在线试用</a> ·
   <a href="https://github.com/Stirling-Tools/Stirling-PDF">上游项目</a>
 </p>
 
