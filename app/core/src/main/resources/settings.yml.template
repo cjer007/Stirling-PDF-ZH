@@ -13,7 +13,8 @@
 security:
   honorOwnerPasswords: true # Require the permissions password for restricted PDF actions; opening passwords are always required.
   blockSignedPdfEdits: false # Lock digitally signed PDFs against changes in the web and desktop apps; viewing, converting and signing again stay allowed. API calls and server pipelines are not affected.
-  enableLogin: true # set to 'true' to enable login
+  enableLogin: false # 单机版免登录：Stirling 自建部署没有公开注册，注册页只连它的云端 SaaS，
+  # 国内必然「无连接服务器」。试用与激活走本汉化版自带的授权弹窗。
   ssoAutoLogin: false
   loginAttemptCount: 5 # lock user account after 5 tries; when using e.g. Fail2Ban you can deactivate the function with -1
   loginResetTimeMinutes: 120 # lock account for 2 hours after x attempts
@@ -187,7 +188,7 @@ system:
   defaultLocale: "zh-CN" # 为新访客强制指定默认语言（如 'zh-CN'、'en-US'、'de-DE'）。留空则自动检测浏览器语言，最终回退到 en-US
   googlevisibility: false # 'true' serves an allow-all /robots.txt; 'false' serves a disallow-all /robots.txt to keep the instance out of search engines
   enableAlphaFunctionality: false # set to enable functionality which might need more testing before it fully goes live (this feature might make no changes)
-  showUpdate: true # see when a new update is available
+  showUpdate: false # 本汉化版由发行者统一发布，不向终端用户提示上游更新
   showUpdateOnlyAdmin: true # only admins can see when a new update is available, depending on showUpdate it must be set to 'true'
   showSettingsWhenNoLogin: true # set to 'false' to hide settings button when login is disabled (enableLogin: false). Only applies when login is disabled.
   customHTMLFiles: false # enable to have files placed in /customFiles/templates override the existing template HTML files
