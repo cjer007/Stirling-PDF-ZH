@@ -13,8 +13,8 @@
 security:
   honorOwnerPasswords: true # Require the permissions password for restricted PDF actions; opening passwords are always required.
   blockSignedPdfEdits: false # Lock digitally signed PDFs against changes in the web and desktop apps; viewing, converting and signing again stay allowed. API calls and server pipelines are not affected.
-  enableLogin: false # 单机版免登录：Stirling 自建部署没有公开注册，注册页只连它的云端 SaaS，
-  # 国内必然「无连接服务器」。试用与激活走本汉化版自带的授权弹窗。
+  enableLogin: true # 开启登录与用户管理；Stirling 自建部署没有公开注册（/signup 会重定向到 /login），
+  # 账号由管理员在「设置 → 登录与安全」里创建
   ssoAutoLogin: false
   loginAttemptCount: 5 # lock user account after 5 tries; when using e.g. Fail2Ban you can deactivate the function with -1
   loginResetTimeMinutes: 120 # lock account for 2 hours after x attempts
