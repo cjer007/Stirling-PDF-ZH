@@ -1,9 +1,14 @@
 package stirling.software.SPDF;
 
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,7 +63,64 @@ public class SPDFApplication {
         this.applicationProperties = applicationProperties;
     }
 
+    /** 进程存活期间持有；锁与 Channel 同生命周期，提前 close 会让锁失效。 */
+    private static FileChannel instanceLockChannel;
+
+    /**
+     * 本机是否已有实例在运行。
+     *
+     * <p>用文件锁而非端口探测：端口可能被改配置或别的程序占用，而锁文件由操作系统在进程结束时自动释放， 不会留下假阳性。
+     *
+     * @return true 表示已有实例，调用方应直接结束本次启动
+     */
+    private static boolean anotherInstanceRunning() {
+        try {
+            Path lockPath =
+                    Path.of(InstallationPathConfig.getSettingsPath())
+                            .resolveSibling(".instance.lock");
+            Files.createDirectories(lockPath.getParent());
+            instanceLockChannel =
+                    FileChannel.open(lockPath, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            FileLock lock = instanceLockChannel.tryLock();
+            if (lock != null) {
+                return false;
+            }
+            instanceLockChannel.close();
+            instanceLockChannel = null;
+            String port = resolveServerPort();
+            log.warn("已有实例在运行，打开浏览器指向 localhost:{}", port);
+            browseLocal(port);
+            return true;
+        } catch (Exception e) {
+            log.debug("单实例检测失败，按全新启动处理: {}", e.toString());
+            return false;
+        }
+    }
+
+    private static String resolveServerPort() {
+        String port = System.getenv("SERVER_PORT");
+        return (port == null || port.isBlank()) ? "8080" : port;
+    }
+
+    private static void browseLocal(String port) {
+        try {
+            Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+            if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+                desktop.browse(URI.create("http://localhost:" + port + "/"));
+            }
+        } catch (Exception e) {
+            log.debug("打开浏览器失败: {}", e.toString());
+        }
+    }
+
     public static void main(String[] args) throws IOException, InterruptedException {
+        // 单实例保护：桌面版用户容易连点两次图标，第二个实例会和第一个抢同一个 H2
+        // 数据库文件锁（MVStoreException: The file is locked），JPA 初始化失败，
+        // 表现为「装了但打不开 / 用户管理空白」。已有实例在跑时直接把浏览器指过去。
+        if (anotherInstanceRunning()) {
+            return;
+        }
+
         SpringApplication app = new SpringApplication(SPDFApplication.class);
 
         Properties props = new Properties();
